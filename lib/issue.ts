@@ -65,7 +65,7 @@ export async function listIssueComments({
     })
   );
   issueComments.sort(byCreatedAt).reverse();
-  return issueComments.sort(byCreatedAt).reverse();
+  return issueComments.sort(byCreatedAt);
 }
 
 function byCreatedAt(a: any, b: any) {
