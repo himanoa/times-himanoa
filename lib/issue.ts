@@ -52,8 +52,7 @@ export async function listIssueComments({
     `${dataDirectoryPath}/issues/${issueNumber}/issue_comments/*.md`
   );
   const issueComments =  await Promise.all(paths
-    .map((filePath) => {
-      return async () => {
+    .map(async (filePath) => {
         const content = fs.readFileSync(filePath, { encoding: "utf-8" });
         const issueMatter = matter(content);
         const body = issueMatter.content;
@@ -63,8 +62,7 @@ export async function listIssueComments({
           bodyHTML,
           ...issueMatter.data,
         };
-      }
-    }));
+    }))
     issueComments
     .sort(byCreatedAt)
     .reverse();
