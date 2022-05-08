@@ -70,9 +70,9 @@ export async function listIssueComments({
 
 function byCreatedAt(a: any, b: any) {
   if (a.created_at < b.created_at) {
-    return -1;
-  } else if (a.created_at > b.created_at) {
     return 1;
+  } else if (a.created_at > b.created_at) {
+    return -1;
   } else {
     return 0;
   }
