@@ -37,9 +37,10 @@ const ShowArticle: NextPage<Props> = ({ issue, issueComments }) => {
         <div dangerouslySetInnerHTML={{ __html: issue.bodyHTML }}></div>
       </section>
       {issueComments.map((issueComment) => (
-        <article key={issueComment.id}>
+        <article key={issueComment.id} id={`comment-${issueComment.id}`}>
           <section>
-            <header>
+            <header className="comment-section-header">
+              <Link href={`#comment-${issueComment.id}`}>#</Link>
               <Time dateTime={issueComment.created_at} />
             </header>
             <div

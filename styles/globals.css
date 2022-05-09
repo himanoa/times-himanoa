@@ -85,7 +85,6 @@ section > ol > li {
 
 time {
   color: var(--color-light);
-  display: block;
   font-size: 0.8rem;
 }
 
@@ -199,4 +198,16 @@ video {
 
 .contains-task-list:dir(rtl) .task-list-item-checkbox {
   margin: 0 -1.6em 0.25em 0.2em;
+}
+
+.comment-section-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.comment-section-header a {
+  color: var(--color-light);
+  display: block;
+  font-size: 0.8rem;
+  padding: 0 0.3rem 0 0;
 }
