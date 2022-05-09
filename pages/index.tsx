@@ -14,7 +14,7 @@ const Home: NextPage<Props> = ({ issues }) => {
     <section>
       <ol>
         {issues.map((issue) => (
-          <li key={issue.number}>
+          <li key={issue.number} className="article-list">
             <Time dateTime={issue.created_at} />
             <Link href={`/articles/${issue.number}`}>{issue.title}</Link>
           </li>

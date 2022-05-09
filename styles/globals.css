@@ -211,3 +211,8 @@ video {
   font-size: 0.8rem;
   padding: 0 0.3rem 0 0;
 }
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+}
