@@ -216,3 +216,8 @@ video {
   display: flex;
   flex-direction: column;
 }
+
+
+article {
+  padding: 8px 0 8px 0;
+}
